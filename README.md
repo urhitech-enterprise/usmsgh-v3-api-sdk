@@ -19,7 +19,7 @@ $ composer require urhitech/urhitech-sms-php
 
 Via Git Bash
 ```
-git clone https://github.com/majesty2017/urhitech-sms-php.git
+git clone https://github.com/majesty2017/usmsgh-v3-api-sdk.git
 ```
 
 ## Documentation
@@ -39,7 +39,7 @@ If you install Urhitech SMS PHP SDK via [Composer](http://getcomposer.org/) the 
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
-use use Urhitech\Usms;;
+use use Urhitech\Usms;
 ```
 
 The Urhitech SMS PHP SDK endpoints are RESTful, and consume and return JSON. All Http endpoints requires an API Key in the request header.
