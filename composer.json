@@ -1,0 +1,23 @@
+{
+    "name": "urhitech/urhitech-v3-sms-php",
+    "description": "PHP SDK for the Urhitech Bulk SMS V3 API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "majesty2017",
+            "email": "insightifytech@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Urhitech\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "ext-curl": "*",
+      "ext-json": "*"
+    }
+}
