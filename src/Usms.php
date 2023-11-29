@@ -85,16 +85,16 @@ class Usms
      *
      * Send single / group SMS
      */
-    public function send_sms($endpoint, $api_token, $sender_id, $phones, $message)
+    public function send_sms($endpoint, $api_token, $sender_id, $phones, $message): mixed
     {
-        return $this->send_server_response($endpoint, $api_token, $sender_id, $phones, $message, 'post');
+        return $this->send_server_response($endpoint, $api_token, $sender_id, self::phone($phones, '233'), $message, 'post');
     }
 
     /**
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * View an SMS
      */
     public function view_sms($url, $api_token)
@@ -102,12 +102,17 @@ class Usms
         return $this->send_server_response($url, $api_token, '','', '');
     }
 
+    protected static function phone(string|array $phone, string $code)
+    {
+        return preg_replace('/^0/', $code, $phone);
+    }
+
 
     /**
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * View profile
      */
     public function profile($url, $api_token)
@@ -120,7 +125,7 @@ class Usms
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * View sms credit balance
      */
     public function check_balance($url, $api_token)
@@ -151,7 +156,7 @@ class Usms
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * View Contact Group
      */
     public function view_contact_group($url, $api_token)
@@ -166,7 +171,7 @@ class Usms
      * @param $api_token
      * @param $post_fields
      * @return mixed
-     * 
+     *
      * Update Contact Group
      */
     public function update_contact_group($endpoint, $api_token, $sender_id, $phones, $message)
@@ -180,7 +185,7 @@ class Usms
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * Delete Contact Group
      */
     public function delete_contact_group($url, $api_token)
@@ -194,7 +199,7 @@ class Usms
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * View all Contact Groups
      */
     public function all_contact_groups($url, $api_token)
@@ -223,10 +228,10 @@ class Usms
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * Retrieves the information of an existing contact
      */
-    public function view_contact($url, $api_token) 
+    public function view_contact($url, $api_token)
     {
         return $this->send_server_response($url, $api_token, '', '', 'post');
     }
@@ -253,7 +258,7 @@ class Usms
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * Delete an existing contact
      */
     public function delete_contact($url, $api_token)
@@ -267,7 +272,7 @@ class Usms
      * @param $url
      * @param $api_token
      * @return mixed
-     * 
+     *
      * View all contacts in group
      */
     public function all_contacts_in_group($url, $api_token)

@@ -9,7 +9,7 @@ The library provides other features. For Example:
 You can sign up for a USMSGH account at [usmsgh.com](https://www.usmsgh.com)
 
 ## Prerequisites
-PHP ^7.4 and later
+PHP ^8.0 and later
 
 ## Installation
 Via [Composer](http://getcomposer.org/)
