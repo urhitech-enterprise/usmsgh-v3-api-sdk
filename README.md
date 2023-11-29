@@ -14,7 +14,7 @@ PHP ^7.4 and later
 ## Installation
 Via [Composer](http://getcomposer.org/)
 ```
-$ composer require urhitech/urhitech-sms-php
+$ composer require usmsgh/usmsgh-v3-api-sdk
 ```
 
 Via Git Bash
