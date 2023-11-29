@@ -85,9 +85,9 @@ class Usms
      *
      * Send single / group SMS
      */
-    public function send_sms($endpoint, $api_token, $sender_id, $phones, $message): mixed
+    public function send_sms($endpoint, $api_token, $sender_id, $phones, $message)
     {
-        return $this->send_server_response($endpoint, $api_token, $sender_id, self::phone($phones, '233'), $message, 'post');
+        return $this->send_server_response($endpoint, $api_token, $sender_id, self::phone($phones), $message, 'post');
     }
 
     /**
@@ -102,7 +102,7 @@ class Usms
         return $this->send_server_response($url, $api_token, '','', '');
     }
 
-    protected static function phone(string|array $phone, string $code)
+    protected static function phone(string|array $phone, string $code = '233')
     {
         return preg_replace('/^0/', $code, $phone);
     }
