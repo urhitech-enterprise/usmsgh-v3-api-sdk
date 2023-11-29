@@ -100,3 +100,21 @@ $url = "https://webapp.usmsgh.com/api/v3/me";
 
 $get_profile = $client->profile($url, $api_key);
 ```
+
+## Status Code
+
+| Status | Message |
+| --- | --- |
+| `ok`  | Successfully Send |
+| `100` | Bad gateway requested |
+| `101` | Wrong action |
+| `102` | Authentication failed |
+| `103` | Invalid phone number |
+| `104` | Phone coverage not active |
+| `105` | Insufficient balance |
+| `106` | Invalid Sender ID |
+| `107` | Invalid SMS Type |
+| `108` | SMS Gateway not active |
+| `109` | Invalid Schedule Time |
+| `110` | Media url required |
+| `111` | SMS contain spam word. Wait for approval |
