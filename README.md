@@ -19,7 +19,7 @@ $ composer require usmsgh/usmsgh-v3-api-sdk
 
 Via Git Bash
 ```
-git clone https://github.com/majesty2017/usmsgh-v3-api-sdk.git
+git clone https://github.com/urhitech-enterprise/usmsgh-v3-api-sdk.git
 ```
 
 ## Documentation
